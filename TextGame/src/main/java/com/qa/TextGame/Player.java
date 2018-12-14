@@ -9,8 +9,8 @@ public class Player {
 	private String name = "Finn";
 	private int xMovement = 0;
 	private int yMovement = 0;
-	private double xStart;
-	private double yStart;
+	private int xStart;
+	private int yStart;
 	private int xCoord;
 	private int yCoord;
 	Board Board = new Board();
@@ -64,51 +64,51 @@ public class Player {
 		this.yMovement = yMovement;
 	}
 
-	public double getXStart() {
+	public int getXStart() {
 		return xStart;
 	}
 
-	public void setXStart(double xStart) {
+	public void setXStart(int xStart) {
 		this.xStart = xStart;
 	}
 
-	public double getYStart() {
+	public int getYStart() {
 		return yStart;
 	}
 
-	public void setYStart(double yStart) {
+	public void setYStart(int yStart) {
 		this.yStart = yStart;
 	}
 
-	public double playerStartx() {
-	 xStart = Math.random() * 10 ;
+	public int playerStartx() {
+	 xStart = (int) (Math.random() * 10) ;
 	 return xStart;
 	  
 	}
 
-	public double playerStarty() {
-		yStart =Math.random() * 10 ;
+	public int playerStarty() {
+		yStart =(int) (Math.random() * 10) ;
 		return yStart;
 	}
 
-	public double playerMoveNorth() {
+	public void playerMoveNorth() {
 		xStart = xStart + 1;
-		return xStart;
+		
 	}
 
-	public double playerMoveSouth() {
+	public  void playerMoveSouth() {
 		xStart = xStart - 1;
-		return xStart;
+		
 	}
 
-	public double playerMoveEast() {
+	public void playerMoveEast() {
 		yStart = yStart + 1;
-		return yStart;
+		
 	}
 
-	public double playerMoveWest() {
+	public  void playerMoveWest() {
 		yStart = yStart - 1;
-		return yStart;
+		
 	}
 
 }
